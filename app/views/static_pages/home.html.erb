@@ -1,0 +1,49 @@
+<% provide(:title, "Home") %>
+<head>
+    <title><%= yield(:title) %> | Online Judge Sample App</title>
+    
+</head>
+<body>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      
+    </aside>
+  </div>
+<% else %>
+<style>
+    h1 { 
+    display: white;
+    
+    font-size: 2em;
+    margin-top: 2.90em;
+    margin-bottom: 2.50em;
+    font-weight: bold;
+    }
+    
+    .extra-jumbotron{
+      
+      background-image:url(11.jpg);
+      background-size: cover;
+    }
+</style>
+  <div class="jumbotron extra-jumbotron">
+  
+  <h1 style="color:white;"> Code IT  </h1>
+  <h2 style="color:white;">
+    So you think you are programming champ? Prove it! <br>
+    <%= link_to "Log in", login_path, :style=>'color: red;' %>
+    To Participate! <br>
+    New User? Sign up to face the challenge!
+  </h2>
+
+  <center><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></center>
+</div>
+
+</body>
+
+
+<% end %>            

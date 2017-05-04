@@ -1,0 +1,23 @@
+<% provide(:title, "Score") %>
+<h1>Scoreboard</h1>
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="scoreboard_form">
+        <%= render 'shared/scoreboard_form' %>
+      </section>
+    </aside>
+  </div>
+  
+  
+<% else %>
+<h2>
+  Please <%= link_to "Log in", login_path %> to view scores
+  
+</h2>
+
+<%end%>

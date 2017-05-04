@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: MyText
+  correctness: MyText
+  creativity: MyText
+  relevance: MyText
+  sustainability: MyText
+  userExperience: MyText
+  user: one
+
+two:
+  team: MyText
+  creativity: MyText
+  relevance: MyText
+  sustainability: MyText
+  userExperience: MyText
+  user: two

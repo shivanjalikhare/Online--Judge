@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>Scoreboard</title>
+    <style type="text/css">
+    body
+    {
+        font-family: arial;
+    }
+
+    span,span
+    {
+        margin: 0;
+        text-align: center;
+        outline: 1px solid #003300;
+    }
+
+    span
+    {
+        padding: 3px 7px;
+    }
+
+    span
+    {
+        background: #00CCCC;
+        color: black;
+        
+    }
+
+    span:hover
+    {
+        cursor: pointer;
+        color: black;
+    }
+    </style>
+
+</head>
+<body>
+    <h1 align="center"></h1>
+    <table align="center"  >
+    <li id="scoreboard-<%= scoreboard.id %>">
+  
+  <span class="team">Team Number: <%= scoreboard.team %></span>
+  <span class="correctness">Correctness: <%= scoreboard.correctness %></span>
+  <span class="creativity">Creativity: <%= scoreboard.creativity %></span>
+  <span class="relevance">Relevance: <%= scoreboard.relevance %></span>
+  <span class="sustainability">Sustainability: <%= scoreboard.sustainability %></span>
+  <span class="userExperience">UserExperience: <%= scoreboard.userExperience %></span>
+  <% if current_user?(scoreboard.user) %>
+     <center> <%= link_to "delete", scoreboard, method: :delete,
+                                       data: { confirm: "You sure?" } %> </center>
+    <% end %>                         
+   
+  
+  
+</li>

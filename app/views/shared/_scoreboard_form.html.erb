@@ -1,0 +1,33 @@
+<%= form_for(@scoreboard) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= content_for?(:title) ? yield(:title) : "Hello" %>
+  </div>
+  <%= f.label :team %>
+  <%= f.select :team, [['1','1'],['2','2'],['3','3']] %>
+  
+  
+  <%= f.label :correctness %>
+  <%= f.select :correctness, [['1','1'],['2','2'],['3','3'],['4','4'],['5','5']] %>
+ 
+  
+  <%= f.label :creativity %>
+  <%= f.select :creativity,[['1','1'],['2','2'],['3','3'],['4','4'],['5','5']] %>
+  
+  
+  <%= f.label :relevance %>
+  <%= f.select :relevance,[['1','1'],['2','2'],['3','3'],['4','4'],['5','5']] %>
+  	
+  
+  <%= f.label :sustainability %>
+  <%= f.select :sustainability,[['1','1'],['2','2'],['3','3'],['4','4'],['5','5']] %>
+  
+  
+  <%= f.label :userExperience %>
+  <%= f.select :userExperience, [['1','1'],['2','2'],['3','3'],['4','4'],['5','5']] %>
+  
+ 
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+  
+<% end %>
+
