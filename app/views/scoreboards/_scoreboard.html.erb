@@ -2,55 +2,47 @@
 <html>
 <head>
     <title>Scoreboard</title>
-    <style type="text/css">
-    body
-    {
-        font-family: arial;
+    <style style="text/css">
+  	.hoverTable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+		padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: #b8d1f3;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #ffff99;
     }
+</style>
 
-    span,span
-    {
-        margin: 0;
-        text-align: center;
-        outline: 1px solid #003300;
-    }
-
-    span
-    {
-        padding: 3px 7px;
-    }
-
-    span
-    {
-        background: #00CCCC;
-        color: black;
-        
-    }
-
-    span:hover
-    {
-        cursor: pointer;
-        color: black;
-    }
-    </style>
-
-</head>
-<body>
-    <h1 align="center"></h1>
-    <table align="center"  >
-    <li id="scoreboard-<%= scoreboard.id %>">
-  
-  <span class="team">Team Number: <%= scoreboard.team %></span>
-  <span class="correctness">Correctness: <%= scoreboard.correctness %></span>
-  <span class="creativity">Creativity: <%= scoreboard.creativity %></span>
-  <span class="relevance">Relevance: <%= scoreboard.relevance %></span>
-  <span class="sustainability">Sustainability: <%= scoreboard.sustainability %></span>
-  <span class="userExperience">UserExperience: <%= scoreboard.userExperience %></span>
-  <% if current_user?(scoreboard.user) %>
+<table class="hoverTable">
+	<tr>
+		<td>Team Number: <%= scoreboard.team %></td>
+	</tr>
+	<tr>
+		<tdCorrectness: <%= scoreboard.correctness %></td>
+	</tr>
+	<tr>
+		<td>Creativity: <%= scoreboard.creativity %></td>
+	</tr>
+	<tr>
+		<td>Relevance: <%= scoreboard.relevance %></td>
+	</tr>
+	<tr>
+		<td>Sustainability: <%= scoreboard.sustainability %></td>
+	</tr>
+	<tr>
+		<td>UserExperience: <%= scoreboard.userExperience %></td>
+	</tr>
+</table>
+<% if current_user?(scoreboard.user) %>
      <center> <%= link_to "delete", scoreboard, method: :delete,
                                        data: { confirm: "You sure?" } %> </center>
     <% end %>                         
    
-  
-  
-</li>
+
