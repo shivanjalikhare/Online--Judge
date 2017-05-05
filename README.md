@@ -1,24 +1,16 @@
-# README
+Versions:
+Framework: Ruby on Rails 
+Rails Version: ‘5.0.1’
+Ruby Version: Ruby ‘2.3.0’
+Bootstrap: Bootstrap-sass ‘3.3.6’
+Platform: Cloud9
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to make task of judging easy for competitions, awards etc. this application is created. This app will let
+multiple judges to judge multiple teams and upload their scores on their respective scoreboard. Each judge will
+be able to see scoreboard of other judge but do not have authority to make any modifications to them or
+delete it once uploading the score.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ rails test
+$ rails sever -b $IP -p $PORT
+$ git commit ...
+$ git push
